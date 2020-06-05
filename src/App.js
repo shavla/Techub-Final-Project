@@ -1,26 +1,83 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Home from './Home';
+import About from './About';
+import Contact from './Contact';
+import Admin from './Admin';
+import Cart from './Cart';
+import Item from './Item';
 
-function App() {
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+
+export default function App() {
+  function myFunction() {
+    let x = document.getElementById("myLinks");
+    if (x.style.visibility === "hidden") {
+      x.style.visibility = "visible";
+    } else {
+      x.style.visibility = "hidden";
+    }
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <div className="header">
+          <div className="nav">
+            <button id="but" className="icon" onClick={myFunction}>
+              <i className="fa fa-bars"></i>
+            </button>
+            <div id="myLinks">
+              <ul>
+                <li>
+                  <Link to="/" onClick={myFunction}>Home</Link>
+                </li>
+                <li>
+                  <Link to="/about" onClick={myFunction}>About</Link>
+                </li>
+                <li>
+                  <Link to="/contact" onClick={myFunction}>Contact</Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="title">
+            <h1>Project</h1>
+          </div>
+          <div className="cart">
+            <Link to="/cart">Cart </Link>
+          </div>
+        </div>
+
+
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/cart">
+            <Cart />
+          </Route>
+          <Route path="/admin">
+            <Admin />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/:itemId">
+            <Item />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
-export default App;
+

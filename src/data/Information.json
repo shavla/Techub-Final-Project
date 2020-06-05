@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "title": "One Punch Man Oppai",
+    "description":"One Punch Man Men's Oppai Pull Over Hooded Sweatshirt. Cute, fun and extremely fashionable One Punch Man, Oppai shirt is a totally great shirt everyone will love to wear all day.",
+    "price": 100,
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "isFreeShipping": true,
+    "url": "./images/Oppai.jpeg"
+  },
+  {
+    "id": 2,
+    "title": "Akira Kaneda Jacket",
+    "description":"This jacket is inspired by the movie. The jacket is made with premium quality faux leather material available in red and black color choice. It has a round collar with belted closure, front buckle closure, buttoned cuffs, 2 flap pockets, bomber hem, capsule logo at back and viscose inner lining. We have multiple resources for entire operations including manufacturing",
+    "price": 150,
+    "availableSizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "isFreeShipping": true,
+    "url": "./images/Akira.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Columbia 3in1 Jacket",
+    "description":"Finding an all-inclusive men's winter jacket that can be used in different weather conditions can be a challenge. Fortunately, the Columbia men's bugaboo ii fleece interchange jacket is the perfect multiple-use winter coat.",
+    "price": 50,
+    "availableSizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "isFreeShipping": false,
+    "url": "./images/Columbia.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Heroes Of The Storm",
+    "description":"NECA is proud to present the third series of 7 scale action figures from Heroes of the Storm, the popular online team brawler filled with favorite characters from Blizzard Entertainment vast video game universes!",
+    "price": 75,
+    "availableSizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "isFreeShipping": false,
+    "url": "./images/Murky.jpg"
+  },
+  {
+    "id": 5,
+    "title": "All Storm Characters",
+    "description":"Created in collaboration with Blizzard, these fantastic figures feature game-authentic sculpts and nearly 30 points of articulation for great battle poses.",
+    "price": 125,
+    "availableSizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "isFreeShipping": true,
+    "url": "./images/AllChars.jpg"
+  }
+]
