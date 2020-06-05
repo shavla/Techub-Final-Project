@@ -1,68 +1,50 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+                                                      Final Project
 
-## Available Scripts
+  Project type: e-commerce website
+  Technologies to use: React + NodeJS
+  Due Date : 07.06.2020
 
-In the project directory, you can run:
+  Project Design : https://www.sketch.com/s/4f2bd55e-4b77-45de-bc78-898971ada7da
 
-### `npm start`
+  Overview
+Საბოლოო პროექტი შედგება ორი ნაწილისაგან: ფრონტის მხარე(React) და ბექი(NodeJS).
+Შინაარსობრივად წარმოადგენს სტანდარტულ შოპინგ საიტს, სადაც მომხმარებელს შეუძლია აირჩიოს სასურველი პროდუქტი, გაფილტროს ზომების მიხედვით, ან დაასორტიროს ფასის მიხედვით. Მას ასევე შეუძლია სასურველი რაოდენობის პროდუქტის კალათაში ჩამატება. კალათაში წარმოდგენილი იქნება ყველა პროდუქტი და შენაძენის საერთო ღირებულება.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  Front-End Side
+Პროექტი შედგება 4 ძირითადი გვერდისაგან, ესენია: 
+  Home
+  About
+  Contact 
+  Cart
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+  Home
+Home ფეიჯზე წარმოდგენილი იქნება პროდუქტების სია. Საიდანაც მომხმარებელს შეეძლება ნივთის კალათაში ჩამატება, ასევე მას შეუძლია პროდუქტის დეტალურად ნახვა ფოტოზე დაკლიკებით. Ჩაიტვირთება ახალი გვერდი სადაც წარმოდგენილი იქნება არჩეული პროდუქტის დეტალები.
+Ჰოუმ ფეიჯზე, პროდუქტების სიის თავში წარმოდგენილი იქნება ფილტრაციის და სორტირების პანელი. Მარცხენა მხარეს იქნება ფილტრაცია ზომების მიხედვით, სადაც მომხმარებელს შეუძლია აირჩიოს 1 ან რამოდენიმე ზომა რის შემდეგაც ავტომატურად იფილტრება პროდუქტების სია. Მარჯვენა მხარეს წარმოდგენილი იქნება select რომლის საშუალებითაც შესაძლებელი იქნება პროდუქტების სორტირება ფასის მიხედვით (lowest to highest and vice versa), ხოლო შუაში იქნება დაფილტრული ან სრული პროდუქტების რაოდენობა (17 products found).
 
-### `npm test`
+  About
+About არის სტატიკური გვერდი , სადაც წარმოდგენილი იქნება მხოლოდ და მხოლოდ ტექსტი, შესაბამისი დიზაინით.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  Contact 
+Contact გვერდზე მომხმარებელს შეეძლება საკონტაქტო ფორმაში შეიყვანოს შემდეგი ინფორმაცია: 
+  Name
+  Email
+  Text 
+Როდესაც მომხმარებელი დააჭერს Submit ღილაკს უნდა გაიგზავნოს რექვესთი სერვერთან შესაბამისი მონაცემებით და ჩაიწეროს ეს ინფორმაცია ტექსტურ ფაილში.
 
-### `npm run build`
+  Cart
+Ამ გვერდზე უკვე წარმოდგენილი იქნება მომხმარებლის მიერ ჩამატებული პროდუქტების სია, საიდანაც მას შეეძლება რაოდენობის ცვლილება, ასევე შეეძლება პროდუქტის სიიდან ამოშლაც. ეს ყველაფერი ასახული უნდა იყოს სერვერის მხარეს შესაბამისი რექვესთებით. ეს დატა შენახული უნდა იყოს Session Storage-ში(NodeJS ის საშუალებით);
+ასევე ამ გვერდზე სიის ბოლოში უნდა იყოს დათვლილი პროდუქტების საერთო ღირებულება. 
+კალათის აიქონზე უნდა იყოს ჩამატებული პროდუქტების რაოდენობის მთვლელი, რომელიც შეიცვლება დინამიურად, უნიკალური პროდუქტის ჩამატებისთანავე. 
+თუ კალათა ცარიელი იქნება, უნდა დაიხატოს შესაბამისი ტექსტი (cart is empty).
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  Back-End Side
+Ბექენდის მხარეს, თქვენ უნდა ააწყოთ RESTApi პროდუქტებისათვის, ანუ /admin მისამართზე უნდა დაიხატოს შიდა სამართავი პანელი, სადაც ადმინს შეეძლება ჩაამატოს ახალი პროდუქტი, წაშალოს ან დააედითოს. Წარმოდგენილი იქნება უკვე არსებული პროდუქტების სია, რომელთაც ექნებათ edit და delete ღილაკები. ასევე თავში იქნება პლიუს ღილაკი საიდანაც უნდა მოხდეს ახალი პროდუქტის ჩამატების ფორმის დახატვა. Ახალი პროდუქტი უნდა ჩაამატოთ შემდეგი პარამეტრებით :
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+      "id": 12,
+      "title": "Cat Tee Black T-Shirt",
+      "description": "4 MSL",
+      "availableSizes": ["S", "XS"],
+      "price": 10.9,
+      "isFreeShipping": true
+	“image”: “adghw3gsah44ndas.png”
+Იმის გამო, რომ ბაზა არ გვაქვს, ყოველ რეფრეშზე ჩამატებული პროდიქტები რომ არ წაგვეშალოს, შეგიძლიათ პროდუქტების JSON შეინახოთ ან localStorage-ში, ან session- ში.
