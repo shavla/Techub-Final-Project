@@ -11,7 +11,10 @@ export default function Cart() {
     }
 
     function calculateTotalItemsCost() {
-        if (!addedItem) return;
+         if (!addedItem) {
+            setTotal(0);
+            return;
+        }
         let sum = 0;
         let eachItemOfAddedItem = addedItem.split(' ');
         for (let i = 0; i < eachItemOfAddedItem.length; i++) {
