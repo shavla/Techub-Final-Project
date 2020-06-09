@@ -17,7 +17,7 @@ a:hover {
   justify-content: space-between;
   margin: 20px 50px;
   padding-bottom: 10px;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid rgb(128, 128, 128);
 }
 li {
   display: inline-block;
@@ -27,7 +27,7 @@ li {
   margin: auto 0;
 }
 .title {
-  padding-right: 165px;
+  padding-right: 178px;
 }
 #myLinks { 
   display: inline-block;
